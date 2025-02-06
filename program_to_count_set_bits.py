@@ -1,0 +1,14 @@
+#program to count number of set bits
+class Solution:
+    def hammingWeight(self, n: int) -> int:
+        cnt = 0
+        while n>0:
+            if n & 1==1:
+                cnt +=1
+            n >>=1
+        return cnt
+
+s=Solution()
+num = int(input("Enter a number: "))
+bits = s.hammingWeight(n=num)
+print(f"number of set bits: {bits}")
